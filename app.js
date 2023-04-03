@@ -1,20 +1,3 @@
-/*The background '/' the whole page
-
-the box with the content
-
-
-the close button
-
-
-
-
-
-
-
-
-*/
-// let span = document.getElementsByClassName("close")[0];
-
 let modal = document.getElementById("tech");
 let clickTechDeets = document.getElementById("modal1");
 clickTechDeets.addEventListener("click", function(){
