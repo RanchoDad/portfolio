@@ -1,5 +1,6 @@
 body {
     background-image: url('')
+    scroll-behavior: smoooth;
 }
 
 nav {
@@ -31,4 +32,8 @@ ul {
 a {
     text-decoration: none;
     color: white;
+    padding: 25px;
 }
+a:hover {
+    color: #666;
+  }
