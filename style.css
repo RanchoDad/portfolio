@@ -5,7 +5,7 @@ body {
     background-color:cornsilk;
     color: darkslategray;
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr 3fr 1fr;
+    grid-template-columns: 0.5fr 0.5fr 4fr 1fr;
 }
 
 nav {
@@ -68,8 +68,23 @@ a:hover {
     left: 92.5%;
     transform: translate(0, -50%);
 }
-.menubtn {
-    display: none;
+aside {
+    position: relative;
+  }
+  
+.menu-clicked {
+    display: flex;
+    position: fixed;
+  }
+  
+.menu-clicked:first-child {
+    top: 10px;
+    left: 10px;
+  }
+  
+.menu-clicked:last-child {
+    top: 20px;
+    right: 10px;
 }
 
 main {
@@ -81,11 +96,19 @@ main {
     padding: 45px 20px 10px;
     border-bottom: 3px solid rgb(55, 96, 90);
 }
-#resume{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+#resume {
+    text-align: center;
 }
+#resume img {
+    height: 50px;
+    
+}
+.resume-click {
+    display: inline-flex;
+    margin: 0 50px;    
+}
+
 #modal1 {
     cursor: pointer;
 }
@@ -184,17 +207,27 @@ main {
     display: grid;
     grid-template-columns: .1fr .1fr 3fr .2fr;
     }
-   li.outsidelink {
+    li.outsidelink {
     display: none
    }
     li.page-section {
     display: none;
     }
-    .menubtn {
+    /* .menubtn {
     display: flex;
     position:fixed;
-    top: 1.5%;
-    right: 5%;
+    top: 3%;
+    right: 6%;
     z-index: 2;
+    } */
+    #resume img {
+        height: 50px;
+        margin-left: -50px;
+        margin-right: -50px;   
     }
+    .resume-click {
+        display: inline-flex;
+        margin-right: 50px;    
+    }
+    
   }
