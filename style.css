@@ -37,16 +37,19 @@ ul {
     letter-spacing: .1rem;
     text-decoration: none;   
 }
+
 li a {
     text-decoration: none;
     color: white;
     padding: 25px;
 }
+
 a:hover {
     color: #a8e51a;
     transform: scale(1.2);
     opacity: 0.4;
   }
+
 .navsection img {
     position: relative;
     width: 30px;
@@ -56,8 +59,8 @@ a:hover {
     top: 50%;
     left: 97.5%;
     transform: translate(0, -50%);
-
 }
+
 #lilogo {
     position: relative;
     width: 30px;
@@ -68,23 +71,9 @@ a:hover {
     left: 92.5%;
     transform: translate(0, -50%);
 }
-aside {
-    position: relative;
-  }
-  
+
 .menu-clicked {
-    display: flex;
-    position: fixed;
-  }
-  
-.menu-clicked:first-child {
-    top: 10px;
-    left: 10px;
-  }
-  
-.menu-clicked:last-child {
-    top: 20px;
-    right: 10px;
+    visibility: hidden;
 }
 
 main {
@@ -100,6 +89,7 @@ main {
 #resume {
     text-align: center;
 }
+
 #resume img {
     height: 50px;
     
@@ -112,9 +102,11 @@ main {
 #modal1 {
     cursor: pointer;
 }
+
 #modal2 {
     cursor: pointer;
 }
+
 #overlay1 {
     position: fixed;
     top: 0;
@@ -125,6 +117,7 @@ main {
     z-index: 1; 
     display: none; 
 }
+
 #overlay2 {
     position: fixed;
     top: 0;
@@ -148,6 +141,7 @@ main {
     border-radius: 10%;
     
 }
+
 #travel {
     display: none;
     position: fixed;
@@ -158,8 +152,8 @@ main {
     background-color: darkgray;
     opacity: 1;
     border-radius: 10%;
-
 }
+
 .modalcontent1 {
     background-color: darkslategray;
     color: rgb(199, 184, 124);
@@ -172,8 +166,8 @@ main {
     max-width: 600px; 
     text-align: center;
     border-radius: 10%;
-
   }
+
   .modalcontent2 {
     background-color: darkslategray;
     color: rgb(199, 184, 124);
@@ -187,6 +181,7 @@ main {
     text-align: center;
     border-radius: 10%;
   }
+
   .closebutton, .closebutton2{
     position: absolute;
     top: 0;
@@ -198,6 +193,7 @@ main {
     font-weight: bold;
     cursor: pointer;
   }
+
   footer {
     grid-column: 1 / 5;
   }
@@ -207,27 +203,46 @@ main {
     display: grid;
     grid-template-columns: .1fr .1fr 3fr .2fr;
     }
+
     li.outsidelink {
     display: none
-   }
+    }
+
     li.page-section {
     display: none;
     }
-    /* .menubtn {
-    display: flex;
-    position:fixed;
-    top: 3%;
-    right: 6%;
-    z-index: 2;
-    } */
+
     #resume img {
         height: 50px;
         margin-left: -50px;
         margin-right: -50px;   
     }
+
     .resume-click {
         display: inline-flex;
         margin-right: 50px;    
     }
-    
+
+    .menu-clicked {
+        visibility: visible;
+        display: flexbox;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        flex-direction: row;
+        justify-content: flex-start;  
+        color: green;
+    } 
+
+    .menu-clicked:first-child {
+        top: 10px;
+        left: 10px;
+    }
+
+    .menu-clicked:last-child{
+        top: 10px;
+        left: 90px;
+        margin-left: 2px;;
+    } 
+
   }
