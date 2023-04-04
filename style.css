@@ -1,16 +1,18 @@
-* {
+/* * {
     border: 1px solid rgb(24, 24, 20);
-}
+} */
 body {
     background-color:cornsilk;
-    
+    color: darkslategray;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 3fr 1fr;
 }
 
 nav {
     display: flex;
     flex-direction: row;
     justify-content:flex-end;
-    background-color: rgb(74, 138, 65);
+    background-color: darkslategrey;
     width: 100%;
     height: 40px;
     min-width: 100%;
@@ -23,18 +25,17 @@ nav {
 ul {
     display: flex;
     flex-direction: row;
-    list-style-type: none;
-    justify-content: space-between;
-    
+    list-style-type: none;    
  }
- li {
-    margin: 5px 15px;
+
+ li.page-section {
+    margin: 5px 10px;
     color: white;
     line-height: 1.5px;
     padding-top: 15px;
+    padding-right: 15px;
     letter-spacing: .1rem;
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
 a {
     text-decoration: none;
@@ -42,20 +43,30 @@ a {
     padding: 25px;
 }
 a:hover {
-    color: #666;
-    transform: scale(1.1);
-    opacity: 0.8;
+    color: #a8e51a;
+    transform: scale(1.2);
+    opacity: 0.4;
   }
 .navsection img {
     position: relative;
-    width: 35px;
-    height: 35px;
-    margin: -40px 1px;
-    transition: all 0.3s ease-in-out;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 97.5%;
+    transform: translate(0, -50%);
 
 }
 #lilogo {
-    margin-right: -10px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 92.5%;
+    transform: translate(0, -50%);
 }
 
 main {
@@ -79,43 +90,85 @@ main {
     
     
 }
+#overlay1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+    display: none; 
+}
+#overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+    display: none; 
+}
+
 #tech {
     display: none;
     position: fixed;
-    top: 20px;
-    left: 40px;
-    z-index: 1;
+    top: 50%;
+    left: 35%;
+    z-index: 2;
     overflow: auto;
     background-color: rgb(146, 141, 141);
     opacity: 1;
+    border-radius: 10%;
 }
 #travel {
     display: none;
     position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1;
+    top: 30%;
+    left: 35%;
+    z-index: 2;
     overflow: auto;
     background-color: darkgray;
     opacity: 1;
+    border-radius: 10%;
+
 }
 .modalcontent1 {
-    background-color: white;
-    margin: 15% auto; 
+    background-color: rgb(208, 208, 88);
+    margin: 5% auto; 
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
-    width: 80%; 
+    width: 90%; 
     max-width: 600px; 
     text-align: center;
+    border-radius: 10%;
+
   }
   .modalcontent2 {
-    background-color: white;
-    margin: 15% auto; 
+    background-color:  rgb(208, 208, 88);
+    margin: 5% auto; 
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
-    width: 80%; 
+    width: 90%; 
     max-width: 600px; 
     text-align: center;
+    border-radius: 10%;
+  }
+  footer {
+    grid-column: 1 / 5;
+  }
+
+  @media (max-width: 1100px) {
+    .navsection img {
+        display: none;
+    }
+    #lilogo {
+       display: none;
+    }
+    li.page-section {
+        display: none;
+    }
   }
