@@ -37,7 +37,7 @@ ul {
     letter-spacing: .1rem;
     text-decoration: none;   
 }
-a {
+li a {
     text-decoration: none;
     color: white;
     padding: 25px;
@@ -68,9 +68,12 @@ a:hover {
     left: 92.5%;
     transform: translate(0, -50%);
 }
+.menubtn {
+    display: none;
+}
 
 main {
-    padding: 45px 20px 10px 0px;
+    padding: 45px 20px 10px;
     margin: 0 auto;
 }
 
@@ -78,17 +81,16 @@ main {
     padding: 45px 20px 10px;
     border-bottom: 3px solid rgb(55, 96, 90);
 }
-
-.sectionEls #resume {
-    
-        
+#resume{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.sectionEls #resume h2 {
-    width:fit-content;
+#modal1 {
+    cursor: pointer;
 }
-.sectionEls #resume h3 {
-    
-    
+#modal2 {
+    cursor: pointer;
 }
 #overlay1 {
     position: fixed;
@@ -114,18 +116,19 @@ main {
 #tech {
     display: none;
     position: fixed;
-    top: 50%;
-    left: 35%;
+    top: 20%;
+    left: 37.5%;
     z-index: 2;
     overflow: auto;
     background-color: rgb(146, 141, 141);
     opacity: 1;
     border-radius: 10%;
+    
 }
 #travel {
     display: none;
     position: fixed;
-    top: 30%;
+    top: 20%;
     left: 35%;
     z-index: 2;
     overflow: auto;
@@ -135,7 +138,9 @@ main {
 
 }
 .modalcontent1 {
-    background-color: rgb(208, 208, 88);
+    background-color: darkslategray;
+    color: rgb(199, 184, 124);
+    letter-spacing: .1rem;
     margin: 5% auto; 
     padding: 20px;
     border-radius: 5px;
@@ -147,7 +152,9 @@ main {
 
   }
   .modalcontent2 {
-    background-color:  rgb(208, 208, 88);
+    background-color: darkslategray;
+    color: rgb(199, 184, 124);
+    letter-spacing: .1rem;
     margin: 5% auto; 
     padding: 20px;
     border-radius: 5px;
@@ -157,18 +164,37 @@ main {
     text-align: center;
     border-radius: 10%;
   }
+  .closebutton, .closebutton2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    border: none;
+    background: none;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+  }
   footer {
     grid-column: 1 / 5;
   }
 
   @media (max-width: 1100px) {
-    .navsection img {
-        display: none;
+    body {
+    display: grid;
+    grid-template-columns: .1fr .1fr 3fr .2fr;
     }
-    #lilogo {
-       display: none;
-    }
+   li.outsidelink {
+    display: none
+   }
     li.page-section {
-        display: none;
+    display: none;
+    }
+    .menubtn {
+    display: flex;
+    position:fixed;
+    top: 1.5%;
+    right: 5%;
+    z-index: 2;
     }
   }
