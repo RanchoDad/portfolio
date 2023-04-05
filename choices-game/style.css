@@ -1,0 +1,13 @@
+body {
+    margin: 5px;
+
+}
+h3 {
+    display: flex;
+    justify-content: center;
+}
+li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
