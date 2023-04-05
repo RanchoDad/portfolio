@@ -1,3 +1,5 @@
+
+// Button at the bottom to scroll to the top
 const scrollBtn = document.getElementById("topbutton");
 
 scrollBtn.addEventListener("click", function () {
@@ -6,7 +8,8 @@ scrollBtn.addEventListener("click", function () {
         behavior: "smooth"
       });
     });
-  
+ 
+// 2 modals that reveal info about industry related work experience, their overlays and the closing features
 const modal = document.getElementById("tech");
 const modal2 = document.getElementById("travel");
 const clickTechDeets = document.getElementById("modal1");

@@ -7,7 +7,7 @@ body {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 4fr 1fr;
 }
-
+/* top nav bar styles */
 nav {
     display: flex;
     flex-direction: row;
@@ -71,11 +71,11 @@ a:hover {
     left: 92.5%;
     transform: translate(0, -50%);
 }
-
+/* clickable links when the screen shrinks */
 .menu-clicked {
     visibility: hidden;
 }
-
+/* meat and potatoes of the doc */
 main {
     padding: 45px 20px 10px;
     margin: 0 auto;
@@ -85,7 +85,7 @@ main {
     padding: 45px 20px 10px;
     border-bottom: 3px solid rgb(55, 96, 90);
 }
-
+/* Resume section */
 #resume {
     text-align: center;
 }
@@ -98,6 +98,7 @@ main {
 .resumelink {
     color: darkslategray;
     text-decoration: none;
+    font-weight: bold;
 
 }
 
@@ -105,7 +106,7 @@ main {
     transform: scale(2);
     opacity: 0.4;
 }
-
+/* style of the modals and overlays and close buttons */
 .resume-click {
     display: inline-flex;
     margin: 0 50px;    
@@ -201,20 +202,20 @@ main {
     font-weight: bold;
     cursor: pointer;
   }
-
+/* Button to the top */
   #topbutton {
     position: fixed;
     bottom: 20px;
     right: 400px;
     z-index: 1;
-    background-color: cornsilk;
+    background-color: rgb(227, 220, 191);
     border-color: cornsilk;
   }
 
   #topbutton:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   }
-
+/* the footer */
   footer {
     grid-column: 1 / 5;
   }
