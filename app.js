@@ -1,3 +1,12 @@
+const scrollBtn = document.getElementById("topbutton");
+
+scrollBtn.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  
 const modal = document.getElementById("tech");
 const modal2 = document.getElementById("travel");
 const clickTechDeets = document.getElementById("modal1");
