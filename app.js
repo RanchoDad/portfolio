@@ -64,7 +64,7 @@ const aboutDark = document.getElementById("aboutme");
 const resumeDark = document.getElementById("resume");
 const projectsDark = document.getElementById("projects");
 const resLink =document.querySelector('.resumelink');
-
+const projLink = document.querySelector('.proj-link');
 darkBtn.addEventListener("click", function () {
   aboutDark.classList.remove("about-back-img");
   aboutDark.classList.add("main-dark");
@@ -76,6 +76,7 @@ darkBtn.addEventListener("click", function () {
   bgPicContainer.classList.add("main-dark");
   darkNav.classList.add("nav-dark");
   resLink.style.color = "cornsilk";
+  projLink.style.color = "cornsilk";
 });
 
 ltBtn.addEventListener("click", function () {
@@ -89,4 +90,5 @@ ltBtn.addEventListener("click", function () {
   bgPicContainer.classList.remove("main-dark");
   darkNav.classList.remove("nav-dark");
   resLink.style.color = "darkslategray";
+  projLink.style.color = "darkslategray";
 });
