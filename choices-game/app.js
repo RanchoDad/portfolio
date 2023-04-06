@@ -3,6 +3,7 @@ const cohort = [];
 const remainingCohort = document.querySelector('#words-list');
 const addWordButtonElement = document.querySelector("#cohort-survivor");
 const addChoiceButton = document.querySelector("#add-choice");
+const insertChoice = document.createElement('h2');
 
 function renderList(){
   remainingCohort.innerHTML = '';
@@ -20,9 +21,7 @@ function addChoice() {
     cohort.push(choice);
     choiceInput.value = "";
     renderList();
-  } else if (cohort.length === 0){
-
-  }
+  } 
 }
 
 function removeRandomName(){
@@ -35,17 +34,25 @@ function removeRandomName(){
   const randomIndex = Math.floor(Math.random() * cohort.length);
   const removedName = cohort.splice(randomIndex, 1)[0];
   const displayRemovedName = document.createElement('h2');
-  displayRemovedName.innerText = `${removedName} has been voted off the island.`;
+  displayRemovedName.innerText = `${removedName} was always a bad idea, good riddance.`;
   document.body.appendChild(displayRemovedName);
-  console.log(`The remaining cohort: ${cohort}`);
   renderList();
   return removedName;
 }
 }
 
 function respondToSubmission(){
-  removeRandomName();
+  if (!cohort || cohort.length === 0){
+    insertChoice.innerText = `Add your choices!`;
+    document.querySelector('main').appendChild(insertChoice);
+  }else {
+    const existingInsertChoice = document.querySelector('main h2');
+    if (existingInsertChoice) {
+      existingInsertChoice.remove();
+    }
+    removeRandomName(); }  
 }
+
 function clearCohort() {
   cohort.length = 0;
   remainingCohort.innerHTML = '';
@@ -55,13 +62,13 @@ function clearCohort() {
 
 addWordButtonElement.addEventListener("click", respondToSubmission);
 addChoiceButton.addEventListener("click", addChoice);
-addWordButtonElement.addEventListener("keypress",function (e){
-  if(e.key === 'Enter'){
-      respondToSubmission();
-  }
-})
-addChoiceButton.addEventListener("keypress", function (e){
-  if(e.key === 'Enter'){
-      addChoice();
-  }
-})
+// addWordButtonElement.addEventListener("keypress",function (e){
+//   if(e.key === 'Enter'){
+//       respondToSubmission();
+//   }
+// })
+// addChoiceButton.addEventListener("keypress", function (e){
+//   if(e.key === 'Enter'){
+//       addChoice();
+//   }
+// })

@@ -299,11 +299,17 @@ nav ul li a {
 
 .nav-dark {
   background-color: aqua;
+  transition: background-color 0.5s ease-out;
+
 }
 
 .main-dark {
   background-color: darkslategray;
   color: cornsilk;
+  transition: background-color  0.5s ease-out;
+  transition: color 0.5s ease-out;
+
+
 }
 
 /* the footer */

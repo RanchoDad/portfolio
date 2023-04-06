@@ -63,6 +63,7 @@ const bgPicContainer = document.getElementById("bio-section");
 const aboutDark = document.getElementById("aboutme");
 const resumeDark = document.getElementById("resume");
 const projectsDark = document.getElementById("projects");
+const resLink =document.querySelector('.resumelink');
 
 darkBtn.addEventListener("click", function () {
   aboutDark.classList.remove("about-back-img");
@@ -74,6 +75,7 @@ darkBtn.addEventListener("click", function () {
   bgPicContainer.classList.remove("background-img-picture-container");
   bgPicContainer.classList.add("main-dark");
   darkNav.classList.add("nav-dark");
+  resLink.style.color = "cornsilk";
 });
 
 ltBtn.addEventListener("click", function () {
@@ -86,4 +88,5 @@ ltBtn.addEventListener("click", function () {
   bgPicContainer.classList.add("background-img-picture-container");
   bgPicContainer.classList.remove("main-dark");
   darkNav.classList.remove("nav-dark");
+  resLink.style.color = "darkslategray";
 });
