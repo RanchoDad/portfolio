@@ -52,3 +52,38 @@ closeButton2.addEventListener("click", function (e) {
     overlay2.style.display = "none";
   }
 });
+
+// toggle dark mode
+
+const ltBtn = document.getElementById("ltcolorbtn");
+const darkBtn = document.getElementById("drkcolorbtn");
+const darkNav = document.getElementById("nav");
+const darkMain = document.getElementById("mainsection");
+const bgPicContainer = document.getElementById("bio-section");
+const aboutDark = document.getElementById("aboutme");
+const resumeDark = document.getElementById("resume");
+const projectsDark = document.getElementById("projects");
+
+darkBtn.addEventListener("click", function () {
+  aboutDark.classList.remove("about-back-img");
+  aboutDark.classList.add("main-dark");
+  resumeDark.classList.remove("resume-back-img");
+  resumeDark.classList.add("main-dark");
+  projectsDark.classList.remove("about-back-img");
+  projectsDark.classList.add("main-dark");
+  bgPicContainer.classList.remove("background-img-picture-container");
+  bgPicContainer.classList.add("main-dark");
+  darkNav.classList.add("nav-dark");
+});
+
+ltBtn.addEventListener("click", function () {
+  aboutDark.classList.add("about-back-img");
+  aboutDark.classList.remove("main-dark");
+  resumeDark.classList.add("resume-back-img");
+  resumeDark.classList.remove("main-dark");
+  projectsDark.classList.add("about-back-img");
+  projectsDark.classList.remove("main-dark");
+  bgPicContainer.classList.add("background-img-picture-container");
+  bgPicContainer.classList.remove("main-dark");
+  darkNav.classList.remove("nav-dark");
+});

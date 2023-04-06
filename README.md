@@ -14,6 +14,7 @@ Body
 
 -Each section can be navigated to from the navbar and is outlined in the main section
 
+-Buttons in the navbar allow the user to switch between light and dark
 
 Resume
 
@@ -50,3 +51,5 @@ JS
 -the first section has the variables, functions and elements to create and execute a 'scroll to top' button
 
 -the second section has the variables, functions and elements to create and execute 2 modals, their overlays, and 2 ways to exit each modal
+
+-the third section is setup for 2 buttons, one for dark and one for light mode
