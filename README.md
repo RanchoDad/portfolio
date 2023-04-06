@@ -31,25 +31,31 @@ CSS
 
 -the stylesheet is organized from top to bottom in the html with the media query for smaller screens at the end
 
--the navbar is fixed to the top for easy site navigation
+-there is a 'scroll to top' button at the bottom of the screen
 
--and for ease, there is a 'scroll to top' button at the bottom of the screen
-
--the overlays, close buttons and modals contain a lot of details as they require more attention to activate correctly with the javascript
+-the overlays, close buttons and modals contain a lot of details to activate correctly with the javascript
 
 -I want to redo some of the styling of the modals too
 
 -the media query changes the navbar layout, removing the sections and leaving the outside links
-
--the footer still needs some styling to get the contact links to lay horizontally
 
 -At first I thought the modal was super hard, but styling in css is so tough. I feel like I went back and forth in divs and classes and containers so much trying to get things to fit a certain way. 
 
 
 JS
  
--the first section has the variables, functions and elements to create and execute a 'scroll to top' button
+-the first section has 'scroll to top' button
 
--the second section has the variables, functions and elements to create and execute 2 modals, their overlays, and 2 ways to exit each modal
+-the second section has the  2 modals, their overlays, and 2 ways to exit each modal
 
--the third section is setup for 2 buttons, one for dark and one for light mode
+-the third section is setup for 2 buttons, one for dark and one for light mode and switching all the classes for the effected parts of the page
+
+Outstanding problems/issues
+
+-I'm certain I could have made the light/dark switch easier with a toggle function
+
+-My page doesn't have a very dynamic feel to it, like a static flyer posted on a cork board
+
+-I've spent too much time trying to reposition things like my picture or a button and it still doesn't sit right.
+
+
